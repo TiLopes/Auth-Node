@@ -13,7 +13,7 @@ module.exports = function (sequelize, DataTypes) {
         },
       },
       permission_id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING(50),
         allowNull: false,
         primaryKey: true,
         references: {

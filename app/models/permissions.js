@@ -4,7 +4,7 @@ module.exports = function (sequelize, DataTypes) {
     "Permissions",
     {
       id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING(50),
         allowNull: false,
         primaryKey: true,
       },
