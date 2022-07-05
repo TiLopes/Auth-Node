@@ -1,5 +1,4 @@
 const express = require("express");
-const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const app = express();
 const authRoutes = require("./routes/auth"); // chamar a route
@@ -10,13 +9,7 @@ app.set("view engine", "ejs");
 
 app.use(cors());
 app.use(express.json());
-app.use(cookieParser());
 app.use(express.static(__dirname + "/public"));
-
-// app.use(function (req, res, next) { // desativar a cache
-//   res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-//   next();
-// });
 
 const PORT = 3000;
 
