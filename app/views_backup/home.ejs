@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="/images/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Home</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="container flex">
+        <a class="logo" href="/home">
+          <h1>Home</h1>
+        </a>
+        <nav>
+          <ul>
+            <li>Olá, <%= user.email %>
+            </li>
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <section class="info">
+      <div class="container flex">
+        <p>Parabéns entraste!</p>
+      </div>
+    </section>
+  </body>
+
+</html>

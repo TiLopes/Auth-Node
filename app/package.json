@@ -1,0 +1,29 @@
+{
+  "name": "docker_web_app",
+  "main": "app.js",
+  "author": "Tiago Lopes",
+  "scripts": {
+    "dev": "nodemon -L app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "sequelize": "^6.20.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0",
+    "nodemon": "^2.0.18",
+    "sequelize-auto": "^0.8.8",
+    "sequelize-cli": "^6.4.1"
+  }
+}

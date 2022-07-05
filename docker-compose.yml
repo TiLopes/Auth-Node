@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  server:
+    image: node:latest
+    depends_on:
+      - mysqldb
+    container_name: node_server
+    restart: on-failure
+    build: .
+    volumes:
+      - ./app:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+
+  mysqldb:
+    image: mysql:8
+    container_name: mysql_db
+    restart: always
+    cap_add:
+      - SYS_NICE # CAP_SYS_NICE
+    volumes:
+      - ./mysql:/etc/mysql/conf.d
+      - ./data:/var/lib/mysql
+    ports:
+      - "3306:3306"
